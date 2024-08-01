@@ -1,17 +1,39 @@
-<script>
-export default {
-  name: 'SignUp'
+<script setup>
+import { ref } from 'vue'
+import axios from 'axios'
+const name = ref('')
+const email = ref('')
+const password = ref('')
+
+const signUp = async() => {
+  const userData = {
+    name: name.value,
+    email: email.value,
+    password: password.value
+  }
+
+  let result = await axios.post(`http://localhost:3000/user`, userData)
+
+  if (result.status === 201) {
+    alert('Sign up done')
+    localStorage.setItem('userInfo', JSON.stringify(result))
+  }
+
+  // // console.log('result: ' + JSON.stringify(result))
+  // console.warn(result)
 }
+
+
 </script>
 
 <template>
   <img class="logo" src="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-9Gfim1S8fHg.jpg" />
   <h1>Sign up</h1>
   <div class="register">
-    <input type="text" placeholder="Enter Name" />
-    <input type="text" placeholder="Enter Email" />
-    <input type="text" placeholder="Enter Password" />
-    <button>Sign up</button>
+    <input type="text" v-model="name" placeholder="Enter Name" />
+    <input type="text" v-model="email" placeholder="Enter Email" />
+    <input type="text" v-model="password" placeholder="Enter Password" />
+    <button @click="signUp">Sign up</button>
   </div>
 </template>
 

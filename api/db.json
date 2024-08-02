@@ -11,6 +11,18 @@
       "name": "ugly",
       "email": "ugly@gmail.com",
       "password": "321"
+    },
+    {
+      "id": "ccfe",
+      "name": "testname",
+      "email": "testname@test.com",
+      "password": "123"
+    },
+    {
+      "id": "4b81",
+      "name": "newtest",
+      "email": "newtest@gmail.com",
+      "password": "asd"
     }
   ]
 }

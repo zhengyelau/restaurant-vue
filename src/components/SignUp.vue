@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import axios from 'axios'
+import router from '../router';
+import Home from './Home.vue';
 const name = ref('')
 const email = ref('')
 const password = ref('')
@@ -15,8 +17,8 @@ const signUp = async() => {
   let result = await axios.post(`http://localhost:3000/user`, userData)
 
   if (result.status === 201) {
-    alert('Sign up done')
     localStorage.setItem('userInfo', JSON.stringify(result))
+    router.push({ path: '/', component: Home })
   }
 
   // // console.log('result: ' + JSON.stringify(result))

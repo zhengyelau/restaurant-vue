@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import router from '../router';
 import Home from './Home.vue';
@@ -20,10 +20,12 @@ const signUp = async() => {
     localStorage.setItem('userInfo', JSON.stringify(result))
     router.push({ path: '/', component: Home })
   }
-
-  // // console.log('result: ' + JSON.stringify(result))
-  // console.warn(result)
 }
+
+onMounted(() => {
+  let user = localStorage.getItem("userInfo")
+  if (user) router.push({ path: '/', component: Home })
+})
 
 
 </script>

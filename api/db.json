@@ -23,6 +23,12 @@
       "name": "newtest",
       "email": "newtest@gmail.com",
       "password": "asd"
+    },
+    {
+      "id": "1a5c",
+      "name": "hello",
+      "email": "hello@gmail.com",
+      "password": "abd"
     }
   ]
 }

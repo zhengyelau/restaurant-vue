@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import router from '../router';
+import { RouterLink } from 'vue-router';
 import Home from './Home.vue';
 const name = ref('')
 const email = ref('')
@@ -38,6 +39,9 @@ onMounted(() => {
     <input type="text" v-model="email" placeholder="Enter Email" />
     <input type="text" v-model="password" placeholder="Enter Password" />
     <button @click="signUp">Sign up</button>
+    <p>
+      <RouterLink to="/login">Login</RouterLink>
+    </p>
   </div>
 </template>
 

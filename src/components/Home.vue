@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import router from '../router';
 import { onMounted } from 'vue';

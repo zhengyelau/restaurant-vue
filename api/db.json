@@ -55,6 +55,18 @@
       "name": "Dominos",
       "contact": "222",
       "address": "750321"
+    },
+    {
+      "id": "1b31",
+      "name": "Sushi King",
+      "contact": "333",
+      "address": "750320"
+    },
+    {
+      "id": "5f29",
+      "name": "KFC",
+      "contact": "444",
+      "address": "750300"
     }
   ]
 }

@@ -14,7 +14,7 @@ const logout = () => {
     <div class="nav">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/add">Add Restaurant</RouterLink>
-        <RouterLink to="/update">Update Restaurant</RouterLink>
+        <!-- <RouterLink to="/update">Update Restaurant</RouterLink> -->
         <a @click="logout">Logout</a>
     </div>
 </template>

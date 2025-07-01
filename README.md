@@ -1,5 +1,7 @@
 # restaurants-vue
-
+```
+This is a self learning project, use Vue JS, to understand fundamental.
+```
 ## Project setup
 ```
 npm install
